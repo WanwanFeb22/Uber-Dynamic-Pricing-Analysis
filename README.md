@@ -75,5 +75,12 @@ Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, Folium
 
 ---
 
+## 👤 My Contribution
+This project was completed as part of a team. My primary contributions include:
+- Data cleaning and preprocessing  
+- Regression modeling using scikit-learn  
+- Data visualization and analysis  
+- Interpretation of pricing drivers and business insights  
+
 ## 👤 Author
 Hetong Wang (UNSW FinTech)  
