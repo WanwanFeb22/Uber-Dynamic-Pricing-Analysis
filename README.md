@@ -1,78 +1,79 @@
-# Uber-Dynamic-Pricing-Analysis
-A Python data analysis project exploring Uber dynamic pricing patterns using regression and visualization.
-
 # Uber Dynamic Pricing Analysis (Sydney)
 
 ## 📊 Project Overview
-This project analyzes Uber ride data in Sydney to identify the key factors influencing ride pricing and to simulate the logic behind Uber’s dynamic pricing system.
+This project analyzes Uber trip data in Sydney to identify key drivers of ride pricing and understand the mechanism behind dynamic pricing systems.
 
-The analysis is based on a dataset of 30,195 Uber trips, which was cleaned and filtered to 23,717 valid observations.
+The dataset contains over 30,000 Uber trips, which were cleaned and filtered to 23,717 valid observations for analysis.
 
-## 🎯 Objectives
-- Identify key drivers of Uber fare
-- Analyze demand patterns across time and location
-- Quantify the impact of distance and duration on pricing
-- Provide business insights into dynamic pricing strategies
+---
 
-## 📁 Dataset
-- Source: Kaggle (Synthetic Uber Dataset - Sydney 2021)
-- Original: 30,195 records
-- Cleaned: 23,717 records
+## 🎯 Key Objectives
+- Identify the main factors influencing Uber fares  
+- Analyze demand patterns across time and location  
+- Quantify the impact of distance and duration on pricing  
+- Provide data-driven insights into dynamic pricing strategies  
+
+---
 
 ## ⚙️ Data Processing
-- Removed irrelevant columns (Trip ID, country info, etc.)
+- Removed irrelevant columns (Trip ID, country, postal data)
 - Dropped missing suburb values
-- Filtered:
-  - Drive Time: 5–60 minutes
-  - Positive fare and distance
-- Converted datetime features for time-based analysis
+- Filtered invalid trips:
+  - Duration < 5 mins or > 60 mins removed  
+  - Negative or zero fare/distance removed  
+- Converted datetime features for time-based analysis  
 
-## 📈 Key Analysis
+---
 
-### 1. Time-based Demand
-- Peak demand: 8–10 AM and 6–8 PM
-- Lowest demand: Late night (10 PM – 6 AM)
-- Median fare is higher during peak hours
+## 📈 Analysis & Findings
 
-### 2. Geographic Impact
-- CBD: High demand, stable prices
-- Remote suburbs: Higher fares due to limited supply
-- Tourist areas: Higher willingness to pay
+### 🕒 Time Impact
+- Peak demand: **8–10 AM and 6–8 PM**
+- Higher fares during commuting hours
+- Lower and more stable prices during late night
 
-### 3. Distance & Time Impact
+### 📍 Location Impact
+- CBD: high demand, stable pricing  
+- Remote suburbs: higher fares due to limited driver supply  
+- Tourist areas: higher willingness to pay  
 
-Linear regression models show strong relationships:
+### 📏 Distance & Duration Impact
 
-- Drive Time → Fare ↑
-- Drive Distance → Fare ↑
+Regression model:
+Fare = β₁ × Time + β₂ × Distance
 
-The combined model:
-Fare = β₁ × Time + β₂ × Distance + ε
+Key findings:
+- Both variables strongly influence pricing  
+- Distance has a slightly stronger effect than time  
 
-suggests that distance has a slightly stronger impact than time.
+---
 
 ## 💡 Key Insights
+Uber pricing reflects a dynamic balance between:
+- Demand (time of day)
+- Supply (location)
+- Trip characteristics (distance & duration)
 
-- Uber pricing reflects supply-demand imbalance
-- Peak-hour pricing aligns with commuting patterns
-- Remote areas have higher fares due to limited drivers
-- Distance is a primary pricing driver
+---
 
 ## 💼 Business Implications
+- Dynamic pricing can be optimized using time + location signals  
+- Remote areas may require driver incentives to improve supply  
+- Peak-hour pricing could be further segmented for efficiency  
 
-- Dynamic pricing can be optimized by region and time
-- Incentives could improve driver supply in remote areas
-- Peak-hour pricing could be further segmented
+---
 
 ## 🛠️ Tech Stack
-- Python (Pandas, NumPy)
-- Matplotlib / Seaborn
-- Scikit-learn (Linear Regression)
-- Folium (Geospatial Visualization)
+Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, Folium  
 
-## 📌 Author
-Hetong Wang
-Nina Fan
-Xiaojing Liu
-Boshen Jiang
-Yilin Li
+---
+
+## 📂 Project Files
+- Notebook: full data analysis and modeling  
+- Report: detailed explanation  
+- Slides: presentation summary  
+
+---
+
+## 👤 Author
+Hetong Wang (UNSW FinTech)  
